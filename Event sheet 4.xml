@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 4</name>
+    <events>
+        <event-block sid="547216593135250">
+            <conditions>
+                <condition id="0" name="On clicked" sid="943513495729378" type="Button5" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="172464183626615" type="Button5" />
+                <action id="-9" name="Destroy" sid="311819037126382" type="Text10" />
+                <action id="-9" name="Destroy" sid="823769471546498" type="Sprite19" />
+            </actions>
+        </event-block>
+        <event-block sid="662768474666772">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="591525096894979" type="Button5" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="918504931211536" type="Sprite22">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="522710759005225" type="Sprite20">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="961079469470139">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="294120414947496" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="600542231655745" type="Sprite22">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="0" name="Set text" sid="207674589312019" type="Text11">
+                    <param id="0" name="Text">&quot;Score:&quot; &amp; Score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="411072594234682">
+            <conditions>
+                <condition id="0" name="On click" sid="221452962864848" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="380383555114518" type="Sprite22">
+                    <param id="0" name="Object">Sprite21</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="103399783325826">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="932740862057524" type="Sprite21">
+                    <param id="0" name="Object">Sprite20</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="110827091451544" type="Sprite21">
+                    <param id="0" name="Object">Sprite23</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="837993796797583" type="Sprite20">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="565187634075376" type="Sprite21" />
+                <action id="0" name="Play" sid="333583782840236" type="Audio">
+                    <param id="0" name="Audio file">sound effects explosion</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="233775196367195">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="257216664554379" type="Sprite20">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="632996465736864" type="Sprite20" />
+                <action id="-10" name="Add to" sid="599703506695316" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="677554432389881">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="644024985419400" type="System" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="329065927037363" type="Sprite20">
+                    <param id="0" name="Angle">random (360)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="468588293644876">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="280644047706538" type="Sprite20" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="422292365371264" type="Sprite20">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="724797875322441">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="816006568002071" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="492280215956852" type="Audio">
+                    <param id="0" name="Audio file">Anna Kendrick - Cups (When I-m Gone) Karaoke_ Instrumental (mp3linow.com)</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="846216491297617">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="478664552131322" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="388725132691213" type="System">
+                    <param id="0" name="Layout">Layout 5</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
